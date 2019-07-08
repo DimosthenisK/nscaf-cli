@@ -47,7 +47,7 @@ $ npm install -g nscaf-cli
 $ nscaf COMMAND
 running command...
 $ nscaf (-v|--version|version)
-nscaf-cli/1.0.0 win32-x64 node-v10.16.0
+nscaf-cli/1.0.1 win32-x64 node-v10.16.0
 $ nscaf --help [COMMAND]
 USAGE
   $ nscaf COMMAND
@@ -56,12 +56,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-- [nscaf-cli](#nscaf-cli)
-- [About](#About)
-- [Usage](#Usage)
-- [Commands](#Commands)
-  - [`nscaf help [COMMAND]`](#nscaf-help-COMMAND)
-  - [`nscaf nestmodule MODULENAME`](#nscaf-nestmodule-MODULENAME)
+* [`nscaf help [COMMAND]`](#nscaf-help-command)
+* [`nscaf nestmodule MODULENAME`](#nscaf-nestmodule-modulename)
 
 ## `nscaf help [COMMAND]`
 
@@ -92,5 +88,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src\commands\nestmodule.ts](https://github.com/dimosthenisK/nscaf-cli/blob/v1.0.0/src\commands\nestmodule.ts)_
+_See code: [src\commands\nestmodule.ts](https://github.com/dimosthenisK/nscaf-cli/blob/v1.0.1/src\commands\nestmodule.ts)_
 <!-- commandsstop -->
