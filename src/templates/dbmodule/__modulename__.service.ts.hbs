@@ -1,0 +1,11 @@
+import { Injectable } from '@nestjs/common';
+import { EntityService } from '../../common/EntityService';
+import { {{moduleName.entityNameCapitalized}} } from './{{moduleName.entityName}}.dbentity';
+import { InjectRepository } from '@nestjs/typeorm';
+
+@Injectable()
+export class {{moduleName.classified}}Service extends EntityService<{{moduleName.entityNameCapitalized}}> {
+    constructor(@InjectRepository({{moduleName.entityNameCapitalized}}) {{moduleName.entityName}}) {
+        super({{moduleName.entityName}});
+    }
+}

@@ -1,0 +1,15 @@
+import { Module } from "@nestjs/common";
+import { {{moduleName.classified}}Service } from "./{{moduleName.filenamed}}.service";
+import { TypeOrmModule } from "@nestjs/typeorm";
+import { {{moduleName.entityNameCapitalized}} } from "./{{moduleName.filenamed}}.dbentity";
+import { {{moduleName.classified}}Controller } from "./{{moduleName.filenamed}}.controller";
+
+@Module({
+    imports: [
+        TypeOrmModule.forFeature([{{moduleName.entityNameCapitalized}}])
+    ],
+    providers: [{{moduleName.classified}}Service],
+    exports: [{{moduleName.classified}}Service],
+    controllers: [{{moduleName.classified}}Controller]
+})
+export class {{moduleName.classified}}Module {}

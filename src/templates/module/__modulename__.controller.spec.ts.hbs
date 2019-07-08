@@ -1,0 +1,18 @@
+import { Test, TestingModule } from "@nestjs/testing";
+import { {{moduleName.classified}}Controller } from "./{{moduleName.filenamed}}.controller";
+
+describe("{{moduleName.classified}} Controller", () => {
+let controller: {{moduleName.classified}}Controller;
+
+beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+        controllers: [{{moduleName.classified}}Controller]
+    }).compile();
+
+    controller = module.get<{{moduleName.classified}}Controller>({{moduleName.classified}}Controller);
+    });
+
+    it("should be defined", () => {
+        expect(controller).toBeDefined();
+    });
+});

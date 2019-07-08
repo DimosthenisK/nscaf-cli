@@ -1,0 +1,58 @@
+{
+  "name": "nscaf-cli",
+  "description": "A NestJS Scaffolding CLI",
+  "version": "1.0.0",
+  "author": "Dimosthenis Kalaitzis",
+  "bin": {
+    "nscaf": "./bin/run"
+  },
+  "bugs": "https://github.com/dimosthenisK/nscaf-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "fs-extra": "^8.1.0",
+    "handlebars": "^4.1.2",
+    "inflector-js": "^1.0.1",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@types/fs-extra": "^8.0.0",
+    "@types/node": "^10",
+    "globby": "^8",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/dimosthenisK/nscaf-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "nscaf",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "dimosthenisK/nscaf-cli",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}

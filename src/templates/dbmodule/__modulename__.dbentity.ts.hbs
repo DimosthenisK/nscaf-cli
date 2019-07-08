@@ -1,0 +1,15 @@
+import {
+    Entity,
+    Column,
+    ManyToOne,
+    JoinColumn,
+    PrimaryGeneratedColumn,
+} from 'typeorm';
+import { ApiModelProperty } from '@nestjs/swagger';
+
+@Entity()
+export class {{moduleName.entityNameCapitalized}} {
+    @ApiModelProperty()
+    @PrimaryGeneratedColumn()
+    id: number;
+}
