@@ -110,7 +110,12 @@ export default class NestModule extends Command {
           let templated = Handlebars.compile(contents); //generate the template
           let withVars = templated(templateVars); //fill with the template variables
           let filename = file
-            .replace("__modulename__", templateVars.moduleName.filenamed) //replace the file name and extension
+            .replace(
+              "__modulename__",
+              file.indexOf("dbentity") == -1
+                ? templateVars.moduleName.filenamed
+                : templateVars.moduleName.entityName
+            ) //replace the file name and extension
             .replace(".hbs", "");
           fs.writeFile(
             //then write to src
