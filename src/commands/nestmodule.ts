@@ -86,7 +86,7 @@ export default class NestModule extends Command {
               inflector.singularize(args.modulename)
             ),
             classified: inflector.camelize(args.modulename),
-            filenamed: inflector.tableize(args.modulename)
+            filenamed: inflector.underscore(args.modulename)
           },
           settings: {
             needsDBModel,
