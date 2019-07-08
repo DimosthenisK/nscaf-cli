@@ -11,6 +11,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
+    "cli-ux": "^5.3.0",
     "fs-extra": "^8.1.0",
     "handlebars": "^4.1.2",
     "inflector-js": "^1.0.1",
