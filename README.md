@@ -9,9 +9,37 @@ A NestJS Scaffolding CLI
 [![License](https://img.shields.io/npm/l/nscaf-cli.svg)](https://github.com/dimosthenisK/nscaf-cli/blob/master/package.json)
 
 <!-- toc -->
+* [About](#about)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+# About
+Made with oclif - the open CLI framework.
+
+This is a cli to generate advanced modules for nestJS. These modules include the CRUD actions from @nestjsx/crud.
+
+Note:
+
+You must have an entityService class that the generated modules will inherit from in case of database requirements.
+
+This is a sample EntityService:
+```Typescript
+import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+
+export class EntityService<T> extends TypeOrmCrudService<T> {
+    get repository(): Repository<T> {
+        return this.repo;
+    }
+
+    constructor(repo: Repository<T>) {
+        super(repo);
+    }
+}
+
+```
+
 # Usage
 <!-- usage -->
 ```sh-session
@@ -28,8 +56,12 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`nscaf help [COMMAND]`](#nscaf-help-command)
-* [`nscaf nestmodule MODULENAME`](#nscaf-nestmodule-modulename)
+- [nscaf-cli](#nscaf-cli)
+- [About](#About)
+- [Usage](#Usage)
+- [Commands](#Commands)
+  - [`nscaf help [COMMAND]`](#nscaf-help-COMMAND)
+  - [`nscaf nestmodule MODULENAME`](#nscaf-nestmodule-MODULENAME)
 
 ## `nscaf help [COMMAND]`
 
