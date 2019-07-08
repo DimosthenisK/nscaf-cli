@@ -51,7 +51,7 @@
   "repository": "dimosthenisK/nscaf-cli",
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
-    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme && xcopy \"./src/templates\" \"./lib/templates\" /s /e /y",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
   },

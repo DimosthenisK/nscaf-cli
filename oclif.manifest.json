@@ -1,0 +1,1 @@
+{"version":"1.0.2","commands":{"nestmodule":{"id":"nestmodule","description":"Generate a new NestJS Module","pluginName":"nscaf-cli","pluginType":"core","aliases":[],"examples":[],"flags":{"help":{"name":"help","type":"boolean","char":"h","description":"show CLI help","allowNo":false}},"args":[{"name":"modulename","required":true}]}}}
