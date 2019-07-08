@@ -42,14 +42,14 @@ export default class NestModule extends Command {
 
     //Get the options from the user
     let needsDBModel = await this.bprompt("Should I create a dbModel?", "y");
-    let needsController = await this.bprompt(
+    /*let needsController = await this.bprompt(
       "Should I create a controller?",
       "y"
     );
     let needsToBeRegistered = await this.bprompt(
       "Should I register the module?",
       "y"
-    );
+    );*/
     let isNested = await cli.prompt("Is this a submodule? Name the parent", {
       type: "normal",
       required: false
@@ -90,8 +90,8 @@ export default class NestModule extends Command {
           },
           settings: {
             needsDBModel,
-            needsController,
-            needsToBeRegistered,
+            /*needsController,
+            needsToBeRegistered,*/
             isNested
           }
         };
