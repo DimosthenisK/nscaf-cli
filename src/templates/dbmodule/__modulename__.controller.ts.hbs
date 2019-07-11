@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { Crud } from '@nestjsx/crud';
+import { Crud, CrudController, } from '@nestjsx/crud';
 import { {{moduleName.entityNameCapitalized}} } from './{{moduleName.entityName}}.dbentity';
 import { {{moduleName.classified}}Service } from './{{moduleName.classified}}.service';
 
@@ -9,6 +9,10 @@ import { {{moduleName.classified}}Service } from './{{moduleName.classified}}.se
     },
 })
 @Controller('{{moduleName.entityName}}')
-export class {{moduleName.classified}}Controller {
+export class {{moduleName.classified}}Controller implements CrudController<{{moduleName.entityNameCapitalized}}> {
     constructor(public service: {{moduleName.classified}}Service) {}
+
+    get base(): CrudController<{{moduleName.entityNameCapitalized}}> {
+        return this;
+    }
 }
